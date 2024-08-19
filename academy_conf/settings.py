@@ -189,14 +189,6 @@ AUTH_USER_MODEL = "users.CustomUser"
 
 CORS_ALLOW_ALL_ORIGINS = True
 
-# EMAIL_HOST = "smtp.sendgrid.net"
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = "apikey"
-# EMAIL_HOST_PASSWORD = (
-#    "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"
-# )
-
 # RESEND
 RESEND_API_KEY = "re_BfSUgFu9_D4zS3iaGRr1pbHkkHkxBoFdg"
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
