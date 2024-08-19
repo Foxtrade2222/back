@@ -1,0 +1,90 @@
+from django.urls import path
+
+from users.views import (
+    ChangePasswordView,
+    CreateUserView,
+    DeleteUserView,
+    EditUserView,
+    ListStatisticsAdminsView,
+    ListTotalActiveStudentsView,
+    ListTotalAdminsView,
+    ListTotalStudentsView,
+    ListTotalTeachersView,
+    ListUsersView,
+    LoginUserView,
+    ResetPasswordView,
+    RetrieveProfileView,
+    RetrieveUserView,
+    SignUpUserView,
+    UpdateProfileView,
+)
+
+app_name = "users"
+urlpatterns = [
+    path(
+        "login/",
+        LoginUserView.as_view(),
+        name="login",
+    ),
+    path(
+        "signup/",
+        SignUpUserView.as_view(),
+    ),
+    path(
+        "reset/password/",
+        ResetPasswordView.as_view(),
+    ),
+    path(
+        "update/profile/",
+        UpdateProfileView.as_view(),
+    ),
+    path(
+        "profile/me/",
+        RetrieveProfileView.as_view(),
+    ),
+    path(
+        "change/password/",
+        ChangePasswordView.as_view(),
+    ),
+    path(
+        "create/user/",
+        CreateUserView.as_view(),
+        name="create-user",
+    ),
+    path(
+        "delete/user/<int:pk>/",
+        DeleteUserView.as_view(),
+    ),
+    path(
+        "retrieve/user/<int:pk>/",
+        RetrieveUserView.as_view(),
+    ),
+    path(
+        "update/user/<int:pk>/",
+        EditUserView.as_view(),
+    ),
+    path(
+        "list/students/",
+        ListTotalStudentsView.as_view(),
+    ),
+    path(
+        "list/active/students/",
+        ListTotalActiveStudentsView.as_view(),
+    ),
+    path(
+        "list/teachers/",
+        ListTotalTeachersView.as_view(),
+    ),
+    path(
+        "list/admins/",
+        ListTotalAdminsView.as_view(),
+    ),
+    path(
+        "list/admin/statistics/",
+        ListStatisticsAdminsView.as_view(),
+    ),
+    path(
+        "list/users/",
+        ListUsersView.as_view(),
+    ),
+]
