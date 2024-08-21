@@ -205,8 +205,8 @@ SENDGRID_ECHO_TO_STDOUT = True
 STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY", None)
 
 COINPAYMENT_API = CoinPaymentsAPI(
-    public_key="",
-    private_key="",
+    public_key="9c35764021ce830f45031e386a99ae6924594d46bb6388c6ea1e95fdce238b77",
+    private_key="cf12d932f1Ed90ac1A2d391688A4797B302B4e8131274cC624fe3C7456FdB92d",
 )
 
 django_heroku.settings(locals())
